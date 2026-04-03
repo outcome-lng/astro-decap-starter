@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'contact');
+const { Content } = await render(page);
+---
+
+<Base title={page.data.seo_title ?? page.data.title} description={page.data.seo_description}>
+  <Hero
+    heading={page.data.hero_heading}
+    subheading={page.data.hero_subheading}
+  />
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 prose prose-gray">
+      <Content />
+    </div>
+  </section>
+</Base>

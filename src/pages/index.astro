@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'home');
+const { Content } = await render(page);
+---
+
+<Base title={page.data.seo_title ?? page.data.title} description={page.data.seo_description}>
+  <Hero
+    heading={page.data.hero_heading}
+    subheading={page.data.hero_subheading}
+    image={page.data.hero_image}
+    buttonText={page.data.hero_button_text}
+    buttonUrl={page.data.hero_button_url}
+  />
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 prose prose-gray">
+      <Content />
+    </div>
+  </section>
+</Base>
