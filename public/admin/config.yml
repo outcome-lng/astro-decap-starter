@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: false
+    format: "yaml-frontmatter"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Page name (used in navigation and as fallback for SEO title)"
+
+      - label: "SEO Title"
+        name: "seo_title"
+        widget: "string"
+        required: false
+        hint: "Title shown in browser tab and search results"
+
+      - label: "SEO Description"
+        name: "seo_description"
+        widget: "text"
+        required: false
+        hint: "Short description for search engines (150-160 characters)"
+
+      - label: "Hero Heading"
+        name: "hero_heading"
+        widget: "string"
+        required: false
+        hint: "Main heading displayed in the hero section"
+
+      - label: "Hero Subheading"
+        name: "hero_subheading"
+        widget: "string"
+        required: false
+        hint: "Supporting text below the main heading"
+
+      - label: "Hero Image"
+        name: "hero_image"
+        widget: "image"
+        required: false
+        hint: "Background image for the hero section"
+
+      - label: "Hero Button Text"
+        name: "hero_button_text"
+        widget: "string"
+        required: false
+        hint: "Text on the call-to-action button (leave empty to hide button)"
+
+      - label: "Hero Button Link"
+        name: "hero_button_url"
+        widget: "string"
+        required: false
+        hint: "Where the button links to (e.g. /about or https://example.com)"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Main page content — supports headings, bold, italic, links, and images"
