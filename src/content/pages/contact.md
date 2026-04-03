@@ -1,16 +1,11 @@
 ---
-title: Contact
-seo_title: Contact Us — Your Business Name
-seo_description: Get in touch with us.
-hero_heading: Get in Touch
-hero_subheading: We'd love to hear from you.
-hero_button_text: Click
+title: "Contact"
+seo_title: "Contact Us — InKindRa"
+seo_description: "Get in touch with InKindRa. We aim to respond within one business day."
+hero_heading: "Get in touch"
+hero_subheading: "We aim to respond within one business day."
+email: "info@inkindra.com"
+phone: "01743 630199"
+address: "Myddle, Shropshire, SY4 3AU"
+calendly_url: "https://calendly.com/kate-phillips-inkindra/30min"
 ---
-
-Reach out to us using the details below.
-
-**Email:** hello@yourbusiness.com
-
-**Phone:** +44 1234 567890
-
-**Address:** 123 Business Street, London, UK

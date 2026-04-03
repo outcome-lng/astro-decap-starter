@@ -21,7 +21,15 @@ const steps = [
   { title: "Review and next steps", desc: "We review what has changed, what has been helpful, and what is still needed. Together we decide whether further support from InKindRa is appropriate, or whether a different type of service would now be suitable." },
 ];
 
-export function HowItWorksPage() {
+interface HowItWorksPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+}
+
+export function HowItWorksPage({
+  heroHeading = "A clear, stepped process — so you always know what's happening",
+  heroSubheading = "We keep things transparent, from the first free call to our regular check-ins.",
+}: HowItWorksPageProps) {
   return (
     <>
       <Navbar />
@@ -30,8 +38,8 @@ export function HowItWorksPage() {
           <section className="bg-cream py-20 md:py-32 border-b border-border">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <FadeIn>
-                <h1 className="mb-6">A clear, stepped process — so you always know what's happening</h1>
-                <p className="text-xl text-text-muted">We keep things transparent, from the first free call to our regular check-ins.</p>
+                <h1 className="mb-6">{heroHeading}</h1>
+                <p className="text-xl text-text-muted">{heroSubheading}</p>
               </FadeIn>
             </div>
           </section>

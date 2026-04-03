@@ -5,7 +5,23 @@ import { FadeIn } from "../FadeIn";
 import { Button } from "../Button";
 import { Mail, Phone, Calendar, AlertTriangle } from "lucide-react";
 
-export function ContactPage() {
+interface ContactPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  calendlyUrl?: string;
+}
+
+export function ContactPage({
+  heroHeading = "Get in touch",
+  heroSubheading = "We aim to respond within one business day.",
+  email = "info@inkindra.com",
+  phone = "01743 630199",
+  address = "Myddle, Shropshire, SY4 3AU",
+  calendlyUrl = "https://calendly.com/kate-phillips-inkindra/30min",
+}: ContactPageProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
@@ -15,33 +31,33 @@ export function ContactPage() {
         <div className="flex flex-col bg-cream min-h-screen pb-24">
           <section className="py-20 text-center px-4">
             <FadeIn>
-              <h1 className="mb-6">Get in touch</h1>
-              <p className="text-xl text-text-muted">We aim to respond within one business day.</p>
+              <h1 className="mb-6">{heroHeading}</h1>
+              <p className="text-xl text-text-muted">{heroSubheading}</p>
             </FadeIn>
           </section>
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid lg:grid-cols-12 gap-12 items-start">
               <FadeIn className="lg:col-span-4 space-y-6">
-                <a href="mailto:info@inkindra.com" className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border hover:border-teal-mid hover:shadow-md transition-all group">
+                <a href={`mailto:${email}`} className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border hover:border-teal-mid hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-teal-pale flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-teal-deep" />
                   </div>
                   <div>
                     <div className="text-sm text-text-muted mb-1">Email us</div>
-                    <div className="font-medium text-teal-deep group-hover:underline">info@inkindra.com</div>
+                    <div className="font-medium text-teal-deep group-hover:underline">{email}</div>
                   </div>
                 </a>
-                <a href="tel:01743630199" className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border hover:border-teal-mid hover:shadow-md transition-all group">
+                <a href={`tel:${phone?.replace(/\s/g, '')}`} className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border hover:border-teal-mid hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-sage-light/30 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-sage" />
                   </div>
                   <div>
                     <div className="text-sm text-text-muted mb-1">Call us</div>
-                    <div className="font-medium text-teal-deep group-hover:underline">01743 630199</div>
+                    <div className="font-medium text-teal-deep group-hover:underline">{phone}</div>
                   </div>
                 </a>
-                <a href="https://calendly.com/kate-phillips-inkindra/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 bg-teal-deep text-white rounded-2xl hover:bg-[#0a4537] hover:shadow-md transition-all">
+                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 bg-teal-deep text-white rounded-2xl hover:bg-[#0a4537] hover:shadow-md transition-all">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <Calendar className="w-6 h-6 text-white" />
                   </div>
@@ -55,7 +71,7 @@ export function ContactPage() {
                   <p className="text-sm text-text-muted leading-relaxed">
                     Serving Shropshire and the catchment areas for The Shrewsbury and Telford Hospital NHS Trust, RJAH and Whitchurch Community Hospital.
                     <br /><br />
-                    Myddle, Shropshire, SY4 3AU
+                    {address}
                   </p>
                 </div>
               </FadeIn>

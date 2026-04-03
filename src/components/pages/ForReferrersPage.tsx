@@ -13,7 +13,15 @@ function CheckItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function ForReferrersPage() {
+interface ForReferrersPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+}
+
+export function ForReferrersPage({
+  heroHeading = "Registered Nurse-led navigation for complex pathways",
+  heroSubheading = "We work alongside NHS, social care, VCSE and private providers in Shropshire to support patients and families who are struggling to navigate the system.",
+}: ForReferrersPageProps) {
   return (
     <>
       <Navbar />
@@ -23,8 +31,8 @@ export function ForReferrersPage() {
             <div className="max-w-4xl mx-auto px-4 text-center">
               <FadeIn>
                 <span className="text-lavender font-medium uppercase tracking-wide text-sm mb-4 block">Information for Professionals</span>
-                <h1 className="mb-6 text-balance">Registered Nurse-led navigation for complex pathways</h1>
-                <p className="text-xl text-text-muted mb-10">We work alongside NHS, social care, VCSE and private providers in Shropshire to support patients and families who are struggling to navigate the system.</p>
+                <h1 className="mb-6 text-balance">{heroHeading}</h1>
+                <p className="text-xl text-text-muted mb-10">{heroSubheading}</p>
                 <div className="max-w-2xl mx-auto">
                   <div className="flex gap-4 p-5 md:p-6 bg-ivory border-l-[3px] border-teal-mid rounded-lg text-left">
                     <Info className="w-6 h-6 text-teal-mid shrink-0 mt-0.5" />

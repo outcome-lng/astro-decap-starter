@@ -11,7 +11,15 @@ const values = [
   { icon: HandHeart, title: "Respectful of boundaries", desc: "We do not provide personal care or clinical treatment. We work alongside your existing teams, within clear ethical and safeguarding boundaries." },
 ];
 
-export function AboutPage() {
+interface AboutPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+}
+
+export function AboutPage({
+  heroHeading = "Care navigation led by a Registered Nurse",
+  heroSubheading = "Everyone deserves a knowledgeable advocate who can connect the dots and reduce the stress of fragmented care.",
+}: AboutPageProps) {
   return (
     <>
       <Navbar />
@@ -21,8 +29,8 @@ export function AboutPage() {
             <div className="max-w-3xl mx-auto px-4 text-center">
               <FadeIn>
                 <span className="text-sage font-medium uppercase tracking-wide text-sm mb-4 block">About InKindRa</span>
-                <h1 className="mb-6">Care navigation led by a Registered Nurse</h1>
-                <p className="text-xl text-text-muted">Everyone deserves a knowledgeable advocate who can connect the dots and reduce the stress of fragmented care.</p>
+                <h1 className="mb-6">{heroHeading}</h1>
+                <p className="text-xl text-text-muted">{heroSubheading}</p>
               </FadeIn>
             </div>
           </section>

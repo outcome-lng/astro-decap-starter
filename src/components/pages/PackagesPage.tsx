@@ -13,7 +13,25 @@ function CheckItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function PackagesPage() {
+interface PackagesPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+  rateFoundations?: string;
+  rateRetainer?: string;
+  rateAdvocacy?: string;
+  rateAdmin?: string;
+  rateMileage?: string;
+}
+
+export function PackagesPage({
+  heroHeading = "Clear, flexible pricing",
+  heroSubheading = "We offer straightforward, transparent pricing with no long-term contracts. All work includes necessary preparation and reasonable liaison time.",
+  rateFoundations = "£195 – £295",
+  rateRetainer = "£199 – £349 / month",
+  rateAdvocacy = "£60 – £90 / hour",
+  rateAdmin = "£20 – £30 / hour",
+  rateMileage = "Standard HMRC rate",
+}: PackagesPageProps) {
   return (
     <>
       <Navbar />
@@ -22,8 +40,8 @@ export function PackagesPage() {
           <section className="bg-cream py-20 md:py-32">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <FadeIn>
-                <h1 className="mb-6">Clear, flexible pricing</h1>
-                <p className="text-xl text-text-muted mb-8">We offer straightforward, transparent pricing with no long-term contracts. All work includes necessary preparation and reasonable liaison time.</p>
+                <h1 className="mb-6">{heroHeading}</h1>
+                <p className="text-xl text-text-muted mb-8">{heroSubheading}</p>
                 <div className="inline-flex items-start gap-3 bg-amber-50 text-amber-900 border border-amber-200 p-4 rounded-lg text-left max-w-2xl text-sm">
                   <Info className="w-5 h-5 shrink-0 mt-0.5 text-amber-600" />
                   <p><strong>Pilot Notice:</strong> The pricing below is indicative for our initial launch phase and may be adjusted. We will always confirm current rates in writing before any commitment.</p>
@@ -130,11 +148,11 @@ export function PackagesPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border/50">
-                      <tr><td className="py-4 px-6 text-text-body">Foundations Assessment (2–3h + written plan)</td><td className="py-4 px-6 font-medium text-teal-deep">£195 – £295</td></tr>
-                      <tr className="bg-cream/50"><td className="py-4 px-6 text-text-body">Navigator Retainer (2–4h/month + 1 accompanied appt)</td><td className="py-4 px-6 font-medium text-teal-deep">£199 – £349 / month</td></tr>
-                      <tr><td className="py-4 px-6 text-text-body">Ad-hoc Registered Nurse advocacy</td><td className="py-4 px-6 font-medium text-teal-deep">£60 – £90 / hour</td></tr>
-                      <tr className="bg-cream/50"><td className="py-4 px-6 text-text-body">Non-clinical administrative support</td><td className="py-4 px-6 font-medium text-teal-deep">£20 – £30 / hour</td></tr>
-                      <tr><td className="py-4 px-6 text-text-body">Mileage (outside central Shrewsbury)</td><td className="py-4 px-6 font-medium text-teal-deep">Standard HMRC rate</td></tr>
+                      <tr><td className="py-4 px-6 text-text-body">Foundations Assessment (2–3h + written plan)</td><td className="py-4 px-6 font-medium text-teal-deep">{rateFoundations}</td></tr>
+                      <tr className="bg-cream/50"><td className="py-4 px-6 text-text-body">Navigator Retainer (2–4h/month + 1 accompanied appt)</td><td className="py-4 px-6 font-medium text-teal-deep">{rateRetainer}</td></tr>
+                      <tr><td className="py-4 px-6 text-text-body">Ad-hoc Registered Nurse advocacy</td><td className="py-4 px-6 font-medium text-teal-deep">{rateAdvocacy}</td></tr>
+                      <tr className="bg-cream/50"><td className="py-4 px-6 text-text-body">Non-clinical administrative support</td><td className="py-4 px-6 font-medium text-teal-deep">{rateAdmin}</td></tr>
+                      <tr><td className="py-4 px-6 text-text-body">Mileage (outside central Shrewsbury)</td><td className="py-4 px-6 font-medium text-teal-deep">{rateMileage}</td></tr>
                     </tbody>
                   </table>
                 </div>

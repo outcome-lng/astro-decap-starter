@@ -1,19 +1,15 @@
 ---
-title: About
-seo_title: About Us — Testing
-seo_description: We are on a mission. Learn more about our team and mission.
-hero_heading: About Us
-hero_subheading: Our story and what drives us.
-hero_button_text: Click here to contact us
-hero_button_url: /contact
+title: "About"
+seo_title: "About — InKindRa"
+seo_description: "InKindRa is a Registered Nurse-led, independent patient advocacy and care navigation service for adults, families and carers in Shropshire."
+hero_heading: "Care navigation led by a Registered Nurse"
+hero_subheading: "Everyone deserves a knowledgeable advocate who can connect the dots and reduce the stress of fragmented care."
 ---
 
-Tell your story here. Who you are, what you believe in, and why you started this business.
+InKindRa is a Registered Nurse-led, independent patient advocacy and connected care navigation service for adults, families and carers in Shropshire.
 
-## Our Team
+We exist to reduce the stress, confusion and isolation that can come with fragmented health, social care and community services – especially around hospital admission, discharge and complex care pathways.
 
-Introduce your team members here.
+Kate Phillips, our founder, is a Registered General Nurse (RAF-trained) with extensive experience across NHS and community settings, primary/secondary care, private health insurance, and clinical negligence.
 
-## Our Mission
-
-Describe your mission and values.
+Kate has seen first-hand how difficult it can be for individuals and families to hold everything together — appointments, information, decisions, caring responsibilities — while also coping with illness, change and uncertainty. InKindRa was created to offer something that is often missing: calm, informed, independent support that helps people join the dots between services.

@@ -2,7 +2,15 @@ import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
 import { FadeIn } from "../FadeIn";
 
-export function PrivacyPage() {
+interface PrivacyPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+}
+
+export function PrivacyPage({
+  heroHeading = "Privacy Notice",
+  heroSubheading = "Last updated: January 2025",
+}: PrivacyPageProps) {
   return (
     <>
       <Navbar />
@@ -11,8 +19,8 @@ export function PrivacyPage() {
           <section className="bg-cream py-16 md:py-24 border-b border-border">
             <div className="max-w-3xl mx-auto px-4 text-center">
               <FadeIn>
-                <h1 className="mb-4">Privacy Notice</h1>
-                <p className="text-text-muted">Last updated: January 2025</p>
+                <h1 className="mb-4">{heroHeading}</h1>
+                <p className="text-text-muted">{heroSubheading}</p>
               </FadeIn>
             </div>
           </section>

@@ -1,8 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import { PrivacyPage } from '../components/pages/PrivacyPage';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'privacy');
+const d = page.data;
 ---
 
-<Base title="Privacy Notice — InKindRa" description="How InKindRa handles your personal data. ICO registered, UK GDPR compliant.">
-  <PrivacyPage client:load />
+<Base title={d.seo_title ?? d.title} description={d.seo_description}>
+  <PrivacyPage
+    client:load
+    heroHeading={d.hero_heading}
+    heroSubheading={d.hero_subheading}
+  />
 </Base>

@@ -1,8 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import { ForReferrersPage } from '../components/pages/ForReferrersPage';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'for-referrers');
+const d = page.data;
 ---
 
-<Base title="For Referrers — InKindRa" description="Registered Nurse-led navigation for complex pathways. Information for GPs, discharge teams, social prescribers and charities in Shropshire.">
-  <ForReferrersPage client:load />
+<Base title={d.seo_title ?? d.title} description={d.seo_description}>
+  <ForReferrersPage
+    client:load
+    heroHeading={d.hero_heading}
+    heroSubheading={d.hero_subheading}
+  />
 </Base>

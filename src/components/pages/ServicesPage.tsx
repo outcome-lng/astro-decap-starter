@@ -20,7 +20,15 @@ const services = [
   { id: "carers", icon: HeartHandshake, title: "Carer Coaching & Practical Support", desc: "Caring for a loved one is exhausting. We provide space, guidance, and administrative help so you can focus on being family.", bullets: ["Coaching sessions to help you feel clearer and more confident in your caring role", "Help with forms, admin, signposting and follow-up tasks", "Connecting you with local community and voluntary sector support", "Helping you plan ahead for key points in the care journey"] },
 ];
 
-export function ServicesPage() {
+interface ServicesPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+}
+
+export function ServicesPage({
+  heroHeading = "Practical, non-clinical support that joins the dots",
+  heroSubheading = "InKindRa provides Registered Nurse-led, independent patient advocacy and connected care navigation for adults, families and carers in Shropshire.",
+}: ServicesPageProps) {
   return (
     <>
       <Navbar />
@@ -29,8 +37,8 @@ export function ServicesPage() {
           <section className="bg-cream py-20 md:py-32">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <FadeIn>
-                <h1 className="mb-6">Practical, non-clinical support that joins the dots</h1>
-                <p className="text-xl text-text-muted">InKindRa provides Registered Nurse-led, independent patient advocacy and connected care navigation for adults, families and carers in Shropshire.</p>
+                <h1 className="mb-6">{heroHeading}</h1>
+                <p className="text-xl text-text-muted">{heroSubheading}</p>
               </FadeIn>
             </div>
           </section>

@@ -5,7 +5,7 @@ import { FadeIn } from "../FadeIn";
 import { Button } from "../Button";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
+const defaultFaqs = [
   {
     category: "About InKindRa",
     items: [
@@ -85,7 +85,18 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
   );
 }
 
-export function FaqsPage() {
+interface FaqsPageProps {
+  heroHeading?: string;
+  heroSubheading?: string;
+  faqCategories?: Array<{ category: string; items: Array<{ q: string; a: string }> }>;
+}
+
+export function FaqsPage({
+  heroHeading = "Frequently asked questions",
+  heroSubheading = "If your question isn't covered here, you're very welcome to get in touch.",
+  faqCategories,
+}: FaqsPageProps) {
+  const faqs = faqCategories ?? defaultFaqs;
   return (
     <>
       <Navbar />
@@ -94,8 +105,8 @@ export function FaqsPage() {
           <section className="bg-cream py-20 md:py-32 border-b border-border">
             <div className="max-w-3xl mx-auto px-4 text-center">
               <FadeIn>
-                <h1 className="mb-6">Frequently asked questions</h1>
-                <p className="text-xl text-text-muted">If your question isn't covered here, you're very welcome to get in touch.</p>
+                <h1 className="mb-6">{heroHeading}</h1>
+                <p className="text-xl text-text-muted">{heroSubheading}</p>
               </FadeIn>
             </div>
           </section>
