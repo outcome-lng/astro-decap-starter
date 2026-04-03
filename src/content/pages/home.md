@@ -2,7 +2,7 @@
 title: Home
 seo_title: Testing — Tagline Here
 seo_description: A brief description of your business for search engines.
-hero_heading: Welcome to Your Business
+hero_heading: Testing business
 hero_subheading: A short tagline that describes what you do and why it matters.
 hero_image: /images/placeholder.svg
 hero_button_text: Learn More
