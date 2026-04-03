@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect fill="#e8f4f0" width="400" height="500"/>
+  <circle cx="200" cy="180" r="60" fill="#0d5947" opacity="0.2"/>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#0d5947" font-family="Georgia, serif" font-size="16" opacity="0.5">Kate Phillips</text>
+  <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="#6b7d74" font-family="sans-serif" font-size="12">Photo placeholder</text>
+</svg>
