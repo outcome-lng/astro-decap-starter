@@ -5,6 +5,7 @@ seo_description: We are on a mission. Learn more about our team and mission.
 hero_heading: About Us
 hero_subheading: Our story and what drives us.
 hero_button_text: Click here to contact us
+hero_button_url: /contact
 ---
 
 Tell your story here. Who you are, what you believe in, and why you started this business.
