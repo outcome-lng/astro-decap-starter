@@ -1,9 +1,10 @@
 ---
-title: "Contact"
-seo_title: "Contact Us — Your Business Name"
-seo_description: "Get in touch with us."
-hero_heading: "Get in Touch"
-hero_subheading: "We'd love to hear from you."
+title: Contact
+seo_title: Contact Us — Your Business Name
+seo_description: Get in touch with us.
+hero_heading: Get in Touch
+hero_subheading: We'd love to hear from you.
+hero_button_text: Click
 ---
 
 Reach out to us using the details below.
