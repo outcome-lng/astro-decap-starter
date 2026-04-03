@@ -7,7 +7,7 @@ seo_description: Independent, Registered Nurse-led care navigation and patient
 hero_label: Registered Nurse-led · Shropshire & surrounds
 hero_heading: Registered nurse-led care navigation - so your family isn't doing it alone.
 hero_subheading: We coordinate appointments, communication and next steps across
-  NHS, private and community services — so nothing gets lost between teams.
+  NHS, private and community services - so nothing gets lost between teams.
 hero_cta_text: Talk to a Care Navigator
 hero_cta_url: https://calendly.com/kate-phillips-inkindra/30min
 hero_stat_1_number: 90,500
